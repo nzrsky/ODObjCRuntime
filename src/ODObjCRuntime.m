@@ -50,8 +50,17 @@
     return method ? [[ODObjCMethod alloc] initWithMethod:method] : nil;
 }
 
++ (ODObjCMethod *)od_classMethodWithSelector:(SEL)selector {
+    Method method = class_getClassMethod(self, selector);
+    return method ? [[ODObjCMethod alloc] initWithMethod:method] : nil;
+}
+
 + (BOOL)od_addMethod:(ODObjCMethod *)method {
     return class_addMethod(self, method.selector, method.implementation, method.typeEncoding.UTF8String);
+}
+
++ (IMP)od_methodImplementation:(SEL)selector {
+    return class_getMethodImplementation(self, selector);
 }
 
 + (NSArray<ODObjCProperty *> *)od_properties {
@@ -114,6 +123,10 @@
     return class_getInstanceSize(self);
 }
 
++ (NSString *)od_objCType {
+    return [NSString stringWithFormat:@"%s\"%@\"", @encode(id), NSStringFromClass(self)];
+}
+
 + (NSArray<Class> *)od_subclasses {
     NSMutableArray<Class> *array = [NSMutableArray array];
     [ODObjCRuntime enumerateClassesUsingBlock:^(__unsafe_unretained Class cls, NSUInteger idx, BOOL *stop) {
@@ -137,8 +150,20 @@
     return objc_getAssociatedObject(self, getter);
 }
 
-- (void)od_removeAssociatedProperty:(SEL)getter {
+- (void)od_removeAssociatedProperties {
     objc_removeAssociatedObjects(self);
+}
+
+- (id)od_valueOfIvar:(ODObjCIvar *)ivar {
+    return object_getIvar(self, ivar.ivar);
+}
+
+- (void)od_setValue:(id)value forIvar:(ODObjCIvar *)ivar {
+    object_setIvar(self, ivar.ivar, value);
+}
+
+- (void)od_valueOfIvarWithName:(NSString *)name {
+//    
 }
 
 @end

@@ -65,8 +65,17 @@
     XCTAssert(ivar.offset == 24 && [ivar.name isEqualToString:@"ivarString"] && [ivar.typeEncoding isEqualToString:@"@\"NSString\""]);
     XCTAssert([ivar isEqual:[self.class od_ivarWithName:@"ivarString"]]);
     
+    XCTAssert([self od_valueOfIvar:ivar] == nil);
+    
+    [self od_setValue:@"test" forIvar:ivar];
+    XCTAssert([(NSString *)[self od_valueOfIvar:ivar] isEqualToString:@"test"]);
+    
     ODObjCIvar *tmpIvar = [[ODObjCIvar alloc] initWithName:@"tmpVar" typeEncoding:@"i" offset:2];
     XCTAssert([tmpIvar.name isEqualToString:@"tmpVar"] && [tmpIvar.typeEncoding isEqualToString:@"i"]);
+    
+    ivarInt = 132;
+    [self setValue:@123 forKey:@"ivarInt"];
+    XCTAssert( [[self valueForKey:@"ivarInt"] intValue] == ivarInt);
 }
 
 #pragma mark - Methods
@@ -110,6 +119,9 @@
     NSArray *args = [[ODObjCIvar od_methodWithSelector:@selector(initWithName:typeEncoding:offset:)] argumentsTypes];
     XCTAssert(args.count == 5);
     XCTAssert([[ODObjCIvar od_methodWithSelector:@selector(initWithName:typeEncoding:offset:)].returnType isEqualToString:@"@"]);
+    
+    XCTAssert([self.class od_methodWithSelector:@selector(testRuntime)]);
+    XCTAssert([self.class od_classMethodWithSelector:@selector(testStatic)]);
 }
 
 #pragma mark - Protocols
@@ -186,6 +198,8 @@
             break;
         }
     }
+    
+    XCTAssert([[self.class od_objCType] isEqualToString:@"@\"ODObjCRuntime_Test\""]);
 }
 
 + (void)testStatic {

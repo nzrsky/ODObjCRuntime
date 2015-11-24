@@ -20,9 +20,7 @@
 + (void)od_removeClass;
 
 + (size_t)od_instanceSize;
-
-- (void)od_addAssociatedProperty:(SEL)getter value:(id)value policy:(objc_AssociationPolicy)policy;
-- (id)od_getAssociatedProperty:(SEL)getter;
++ (NSString *)od_objCType;
 
 + (NSArray<ODObjCIvar *> *)od_ivars;
 + (ODObjCIvar *)od_ivarWithName:(NSString *)name;
@@ -30,7 +28,10 @@
 + (NSArray<ODObjCMethod *> *)od_methods;
 + (NSArray<ODObjCMethod *> *)od_classMethods;
 + (ODObjCMethod *)od_methodWithSelector:(SEL)selector;
++ (ODObjCMethod *)od_classMethodWithSelector:(SEL)selector;
 + (BOOL)od_addMethod:(ODObjCMethod *)method;
+
++ (IMP)od_methodImplementation:(SEL)selector;
 
 + (NSArray<ODObjCProperty *> *)od_properties;
 + (ODObjCProperty *)od_propertyWithName: (NSString *)name;
@@ -38,6 +39,13 @@
 
 + (NSArray<ODObjCProtocol *> *)od_protocols;
 + (BOOL)od_addProtocol:(ODObjCProtocol *)protocol;
+
+- (id)od_getAssociatedProperty:(SEL)getter;
+- (void)od_addAssociatedProperty:(SEL)getter value:(id)value policy:(objc_AssociationPolicy)policy;
+- (void)od_removeAssociatedProperties;
+    
+- (id)od_valueOfIvar:(ODObjCIvar *)ivar;
+- (void)od_setValue:(id)value forIvar:(ODObjCIvar *)ivar;
 
 @end
 
