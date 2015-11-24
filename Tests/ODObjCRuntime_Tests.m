@@ -12,6 +12,7 @@
 #import "ODObjCMethod.h"
 #import "ODObjCProperty.h"
 #import "ODObjCIvar.h"
+#import "ODObjCClass.h"
 
 @protocol ODObjCRuntime_TestProtocol <NSObject>
 @required
@@ -132,6 +133,12 @@
     [ODObjCRuntime_TestClass od_swizzleMethod:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)]
                                          with:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(beefMethod)]];
     XCTAssert([[ODObjCRuntime_TestClass new] deadMethod] == 0xbeef);
+    XCTAssert([[ODObjCRuntime_TestClass new] beefMethod] == 0xdead);
+    
+    [ODObjCRuntime_TestClass od_replaceMethod:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(beefMethod)]
+                                         with:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)]];
+    XCTAssert([[ODObjCRuntime_TestClass new] beefMethod] == 0xbeef);
+    XCTAssert([[ODObjCRuntime_TestClass new] deadMethod] == 0xbeef);
 }
 
 #pragma mark - Protocols
@@ -210,6 +217,26 @@
     }
     
     XCTAssert([[self.class od_objCType] isEqualToString:@"@\"ODObjCRuntime_Test\""]);
+    
+    XCTAssert(!NSClassFromString(@"MyClass"));
+    Class cls = [NSObject od_createSubclass:@"MyClass"];
+    XCTAssert(NSClassFromString(@"MyClass"));
+    
+    XCTAssert(!NSClassFromString(@"MyClass2"));
+    ODObjCClass *cls2 = [[ODObjCClass alloc] initWithName:@"MyClass2" superclass:[NSObject class]];
+    [cls2 addProtocol:[[ODObjCProtocol alloc] initWithName:@"NSObject"]];
+    [cls2 addMethod:[self.class od_methodWithSelector:@selector(testRuntime)]];
+    [cls2 addProperty:[self.class od_propertyWithName:@"propertyInt"]];
+    [cls2 addIvar:[self.class od_ivarWithName:@"ivarInt"]];
+    [cls2 registerClass];
+    XCTAssert(NSClassFromString(@"MyClass2"));
+    
+    id cls2Obj = [[NSClassFromString(@"MyClass2") alloc] init];
+    XCTAssert([cls2Obj respondsToSelector:@selector(testRuntime)]);
+    XCTAssert([cls2Obj valueForKey:@"ivarInt"]);
+    XCTAssert([cls2Obj conformsToProtocol:@protocol(NSObject)]);
+//    XCTAssert([cls2Obj respondsToSelector:@selector(propertyInt)]);
+    XCTAssert([[cls2Obj class] od_properties].count == 1);
 }
 
 + (void)testStatic {
