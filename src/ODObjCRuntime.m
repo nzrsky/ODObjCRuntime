@@ -11,6 +11,7 @@
 #import "ODObjCMethod.h"
 #import "ODObjCProperty.h"
 #import "ODObjCProtocol.h"
+#import "ODObjCClass.h"
 #import <dlfcn.h>
 #import <mach-o/ldsyms.h>
 
@@ -61,6 +62,21 @@
 
 + (IMP)od_methodImplementation:(SEL)selector {
     return class_getMethodImplementation(self, selector);
+}
+
++ (IMP)od_replaceMethod:(ODObjCMethod *)method with:(ODObjCMethod *)otherMethod {
+    return class_replaceMethod(self, method.selector, otherMethod.implementation, otherMethod.typeEncoding.UTF8String);
+}
+
++ (void)od_swizzleMethod:(ODObjCMethod *)method with:(ODObjCMethod *)swizzledMethod {
+    Class cls = self.class;
+
+    BOOL added = class_addMethod(cls, method.selector, swizzledMethod.implementation, swizzledMethod.typeEncoding.UTF8String);
+    if (added) {
+        class_replaceMethod(cls, swizzledMethod.selector, method.implementation, method.typeEncoding.UTF8String);
+    } else {
+        method_exchangeImplementations(method.method, swizzledMethod.method);
+    }
 }
 
 + (NSArray<ODObjCProperty *> *)od_properties {
@@ -140,6 +156,10 @@
     }];
     
     return array;
+}
+
++ (Class)od_createSubclass:(NSString *)name {
+    return [[[ODObjCClass alloc] initWithName:name superclass:self] registerClass];
 }
 
 - (void)od_addAssociatedProperty:(SEL)getter value:(id)value policy:(objc_AssociationPolicy)policy {

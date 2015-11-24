@@ -12,9 +12,12 @@
 @class ODObjCIvar, ODObjCProtocol, ODObjCMethod, ODObjCProperty;
 
 @interface NSObject (ODObjCRuntime)
+
 @property (nonatomic, assign) Class od_class;
 + (Class)od_setSuperclass:(Class)superclass;
+
 + (NSArray<Class> *)od_subclasses;
++ (Class)od_createSubclass:(NSString *)name;
 
 + (BOOL)od_isMetaClass;
 + (void)od_removeClass;
@@ -32,6 +35,8 @@
 + (BOOL)od_addMethod:(ODObjCMethod *)method;
 
 + (IMP)od_methodImplementation:(SEL)selector;
++ (IMP)od_replaceMethod:(ODObjCMethod *)method with:(ODObjCMethod *)otherMethod;
++ (void)od_swizzleMethod:(ODObjCMethod *)method with:(ODObjCMethod *)swizzledMethod;
 
 + (NSArray<ODObjCProperty *> *)od_properties;
 + (ODObjCProperty *)od_propertyWithName: (NSString *)name;

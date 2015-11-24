@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA16A6031C0506F500394311 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
+		FA16A6051C0506F500394311 /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
+		FA16A6071C0506F500394311 /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
+		FA16A6091C0506F500394311 /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
+		FA16A60B1C0506F500394311 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
+		FA16A60D1C0506F500394311 /* ODObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB87D351C03628E002AE47E /* ODObjCClass.m */; };
 		FA2C30351C007E3300BD3CE5 /* ODObjCRuntime_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */; };
 		FA2C30371C007E3300BD3CE5 /* libODObjCRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */; };
 		FA2C30401C0080DA00BD3CE5 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
@@ -48,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA16A5F91C0506DD00394311 /* libODObjCRuntime-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libODObjCRuntime-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libODObjCRuntime.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30321C007E3300BD3CE5 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ODObjCRuntime_Tests.m; sourceTree = "<group>"; };
@@ -70,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA16A5F61C0506DD00394311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA2C301F1C007E1300BD3CE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,6 +119,7 @@
 			children = (
 				FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */,
 				FA2C30321C007E3300BD3CE5 /* Tests.xctest */,
+				FA16A5F91C0506DD00394311 /* libODObjCRuntime-OSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,7 +154,34 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FA16A5F71C0506DD00394311 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		FA16A5F81C0506DD00394311 /* ODObjCRuntime-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA16A5FF1C0506DE00394311 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-OSX" */;
+			buildPhases = (
+				FA16A5F51C0506DD00394311 /* Sources */,
+				FA16A5F61C0506DD00394311 /* Frameworks */,
+				FA16A5F71C0506DD00394311 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ODObjCRuntime-OSX";
+			productName = "ODObjCRuntime-OSX";
+			productReference = FA16A5F91C0506DD00394311 /* libODObjCRuntime-OSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		FA2C30211C007E1300BD3CE5 /* ODObjCRuntime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA2C302B1C007E1300BD3CE5 /* Build configuration list for PBXNativeTarget "ODObjCRuntime" */;
@@ -184,6 +226,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = AJR;
 				TargetAttributes = {
+					FA16A5F81C0506DD00394311 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					FA2C30211C007E1300BD3CE5 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -205,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				FA2C30211C007E1300BD3CE5 /* ODObjCRuntime */,
+				FA16A5F81C0506DD00394311 /* ODObjCRuntime-OSX */,
 				FA2C30311C007E3300BD3CE5 /* Tests */,
 			);
 		};
@@ -223,6 +269,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA16A5F51C0506DD00394311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA16A6051C0506F500394311 /* ODObjCIvar.m in Sources */,
+				FA16A60D1C0506F500394311 /* ODObjCClass.m in Sources */,
+				FA16A6091C0506F500394311 /* ODObjCProperty.m in Sources */,
+				FA16A60B1C0506F500394311 /* ODObjCProtocol.m in Sources */,
+				FA16A6031C0506F500394311 /* ODObjCRuntime.m in Sources */,
+				FA16A6071C0506F500394311 /* ODObjCMethod.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA2C301E1C007E1300BD3CE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +320,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FA16A6001C0506DE00394311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA16A6011C0506DE00394311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		FA2C30291C007E1300BD3CE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +425,7 @@
 		FA2C302C1C007E1300BD3CE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -354,6 +436,7 @@
 		FA2C302D1C007E1300BD3CE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -384,6 +467,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA16A5FF1C0506DE00394311 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA16A6001C0506DE00394311 /* Debug */,
+				FA16A6011C0506DE00394311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FA2C301D1C007E1300BD3CE5 /* Build configuration list for PBXProject "ODObjCRuntime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

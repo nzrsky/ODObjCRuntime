@@ -83,6 +83,8 @@
     NSArray<ODObjCMethod *> *methods = [self.class od_methods];
     XCTAssert(methods.count == 9);
     
+    IMP imp = [ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)].implementation;
+    
     NSUInteger idx = [methods indexOfObject:[self.class od_methodWithSelector:@selector(testMethods)]];
     XCTAssert(idx != NSNotFound);
     
@@ -122,6 +124,14 @@
     
     XCTAssert([self.class od_methodWithSelector:@selector(testRuntime)]);
     XCTAssert([self.class od_classMethodWithSelector:@selector(testStatic)]);
+    
+    XCTAssert([[ODObjCRuntime_TestClass new] beefMethod] == 0xbeef);
+    [ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)].implementation = imp;
+    XCTAssert([[ODObjCRuntime_TestClass new] deadMethod] == 0xdead);
+    
+    [ODObjCRuntime_TestClass od_swizzleMethod:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)]
+                                         with:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(beefMethod)]];
+    XCTAssert([[ODObjCRuntime_TestClass new] deadMethod] == 0xbeef);
 }
 
 #pragma mark - Protocols
