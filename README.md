@@ -1,78 +1,28 @@
-# UIView-ODFrame
+# ODObjCRuntime
 
-[![Version](https://img.shields.io/cocoapods/v/UIView-ODFrame.svg?style=flat)](http://cocoapods.org/pods/UIView+ODFrame)
-[![License](https://img.shields.io/cocoapods/l/UIView-ODFrame.svg?style=flat)](http://cocoapods.org/pods/UIView+ODFrame)
-[![Platform](https://img.shields.io/cocoapods/p/UIView-ODFrame.svg?style=flat)](http://cocoapods.org/pods/UIView+ODFrame)
+[![Version](https://img.shields.io/cocoapods/v/ODObjCRuntime.svg?style=flat)](http://cocoapods.org/pods/ODObjCRuntime)
+[![License](https://img.shields.io/cocoapods/l/ODObjCRuntime.svg?style=flat)](http://cocoapods.org/pods/ODObjCRuntime)
+[![Platform](https://img.shields.io/cocoapods/p/ODObjCRuntime.svg?style=flat)](http://cocoapods.org/pods/ODObjCRuntime)
 
-Category for UIView extends the frame accessibility
+ODObjCRuntime is set of classes for working with ObjC Runtime.
 
 ## Usage
 
-For example, instead of:
 ```objective-c
-CGRect rect = view.frame;
-rect.size.width += 100;
-view.frame = rect;
-```
+#import <ODObjCRuntime.h>
 
-you can use:
-```objective-c
-view.od_width+=100;
-```
+// All methods of current class
+NSArray<ODObjCMethod *> *methods = [self.class od_methods];
 
-## Methods
-
-Position:
-    * od_origin;
-    * od_x;
-    * od_y;
-    * od_left;
-    * od_top;
-    * od_bottom;
-    * od_right;
-
-Size:
-    * od_size;
-    * od_height;
-    * od_width;
-
-Bounds:
-    * od_boundsWidth;
-    * od_boundsHeight;
-    * od_boundsX;
-    * od_boundsY;
-
-Center:
-    * od_centerX;
-    * od_centerY;
-
-## Extra inline functions
-
-Point and Frame values:
-```objective-c
-NSValue *ODRect(CGRect frame);
-NSValue *ODPoint(CGPoint point);
-```
-
-Integral structs:
-```objective-c
-CGPoint CGPointIntegral(CGPoint point);
-CGSize CGSizeIntegral(CGSize size);
-```
-
-Average between two values:
-```objective-c
-float avgf(float x1, float x2);
-double avgd(double x1, double x2);
 ```
 
 ## Installation
 
-UIView-ODFrame is available through [CocoaPods](http://cocoapods.org). To install
+ODObjCRuntime is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "UIView-ODFrame"
+pod "ODObjCRuntime"
 ```
 
 ## Author
@@ -81,4 +31,4 @@ Alexey Nazaroff, alexx.nazaroff@gmail.com
 
 ## License
 
-UIView-ODFrame is available under the MIT license. See the LICENSE file for more info.
+ODObjCRuntime is available under the MIT license. See the LICENSE file for more info.
