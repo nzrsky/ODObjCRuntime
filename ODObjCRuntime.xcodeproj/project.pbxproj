@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA2C30351C007E3300BD3CE5 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* Tests.m */; };
+		FA2C30351C007E3300BD3CE5 /* ODObjCRuntime_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */; };
 		FA2C30371C007E3300BD3CE5 /* libODObjCRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */; };
 		FA2C30401C0080DA00BD3CE5 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
 		FA2C30441C0080F000BD3CE5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA2C30411C0080F000BD3CE5 /* LICENSE.txt */; };
@@ -16,6 +16,13 @@
 		FA2C30491C0082C300BD3CE5 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
 		FA2C304A1C0082CB00BD3CE5 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
 		FA2C304B1C0082CE00BD3CE5 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
+		FA2C304E1C00843D00BD3CE5 /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
+		FA2C30511C00844800BD3CE5 /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
+		FA2C30541C00854C00BD3CE5 /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
+		FA9BD22D1C01C77800D0A18B /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
+		FA9BD22E1C01C77B00D0A18B /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
+		FA9BD22F1C01C77D00D0A18B /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
+		FAB87D361C03628E002AE47E /* ODObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB87D351C03628E002AE47E /* ODObjCClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +50,7 @@
 /* Begin PBXFileReference section */
 		FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libODObjCRuntime.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30321C007E3300BD3CE5 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA2C30341C007E3300BD3CE5 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ODObjCRuntime_Tests.m; sourceTree = "<group>"; };
 		FA2C30361C007E3300BD3CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2C303E1C0080DA00BD3CE5 /* ODObjCRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCRuntime.h; sourceTree = "<group>"; };
 		FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCRuntime.m; sourceTree = "<group>"; };
@@ -52,6 +59,14 @@
 		FA2C30431C0080F000BD3CE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		FA2C30471C0082C300BD3CE5 /* ODObjCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCProtocol.h; sourceTree = "<group>"; };
 		FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCProtocol.m; sourceTree = "<group>"; };
+		FA2C304C1C00843D00BD3CE5 /* ODObjCProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCProperty.h; sourceTree = "<group>"; };
+		FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCProperty.m; sourceTree = "<group>"; };
+		FA2C304F1C00844800BD3CE5 /* ODObjCMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCMethod.h; sourceTree = "<group>"; };
+		FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCMethod.m; sourceTree = "<group>"; };
+		FA2C30521C00854C00BD3CE5 /* ODObjCIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCIvar.h; sourceTree = "<group>"; };
+		FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCIvar.m; sourceTree = "<group>"; };
+		FAB87D341C03628E002AE47E /* ODObjCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODObjCClass.h; sourceTree = "<group>"; };
+		FAB87D351C03628E002AE47E /* ODObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODObjCClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +112,7 @@
 		FA2C30331C007E3300BD3CE5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FA2C30341C007E3300BD3CE5 /* Tests.m */,
+				FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */,
 				FA2C30361C007E3300BD3CE5 /* Info.plist */,
 			);
 			path = Tests;
@@ -108,8 +123,16 @@
 			children = (
 				FA2C303E1C0080DA00BD3CE5 /* ODObjCRuntime.h */,
 				FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */,
+				FA2C30521C00854C00BD3CE5 /* ODObjCIvar.h */,
+				FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */,
+				FA2C304F1C00844800BD3CE5 /* ODObjCMethod.h */,
+				FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */,
+				FA2C304C1C00843D00BD3CE5 /* ODObjCProperty.h */,
+				FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */,
 				FA2C30471C0082C300BD3CE5 /* ODObjCProtocol.h */,
 				FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */,
+				FAB87D341C03628E002AE47E /* ODObjCClass.h */,
+				FAB87D351C03628E002AE47E /* ODObjCClass.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -205,7 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2C304A1C0082CB00BD3CE5 /* ODObjCProtocol.m in Sources */,
+				FAB87D361C03628E002AE47E /* ODObjCClass.m in Sources */,
+				FA9BD22F1C01C77D00D0A18B /* ODObjCProperty.m in Sources */,
+				FA9BD22D1C01C77800D0A18B /* ODObjCIvar.m in Sources */,
 				FA2C30401C0080DA00BD3CE5 /* ODObjCRuntime.m in Sources */,
+				FA9BD22E1C01C77B00D0A18B /* ODObjCMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2C30461C0080F000BD3CE5 /* README.md in Sources */,
-				FA2C30351C007E3300BD3CE5 /* Tests.m in Sources */,
+				FA2C304E1C00843D00BD3CE5 /* ODObjCProperty.m in Sources */,
+				FA2C30351C007E3300BD3CE5 /* ODObjCRuntime_Tests.m in Sources */,
 				FA2C30491C0082C300BD3CE5 /* ODObjCProtocol.m in Sources */,
+				FA2C30541C00854C00BD3CE5 /* ODObjCIvar.m in Sources */,
 				FA2C304B1C0082CE00BD3CE5 /* ODObjCRuntime.m in Sources */,
+				FA2C30511C00844800BD3CE5 /* ODObjCMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +398,7 @@
 				FA2C302D1C007E1300BD3CE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA2C303A1C007E3300BD3CE5 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
@@ -376,6 +407,7 @@
 				FA2C303C1C007E3300BD3CE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
