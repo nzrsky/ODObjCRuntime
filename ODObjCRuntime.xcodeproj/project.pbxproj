@@ -16,15 +16,19 @@
 		FA2C30351C007E3300BD3CE5 /* ODObjCRuntime_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* ODObjCRuntime_Tests.m */; };
 		FA2C30371C007E3300BD3CE5 /* libODObjCRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */; };
 		FA2C30401C0080DA00BD3CE5 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
-		FA2C30441C0080F000BD3CE5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA2C30411C0080F000BD3CE5 /* LICENSE.txt */; };
-		FA2C30451C0080F000BD3CE5 /* ODObjCRuntime.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FA2C30421C0080F000BD3CE5 /* ODObjCRuntime.podspec */; };
-		FA2C30461C0080F000BD3CE5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30431C0080F000BD3CE5 /* README.md */; };
-		FA2C30491C0082C300BD3CE5 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
 		FA2C304A1C0082CB00BD3CE5 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
-		FA2C304B1C0082CE00BD3CE5 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
-		FA2C304E1C00843D00BD3CE5 /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
-		FA2C30511C00844800BD3CE5 /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
-		FA2C30541C00854C00BD3CE5 /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
+		FA74502D1C062A6C008A9024 /* ODObjCRuntime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C303E1C0080DA00BD3CE5 /* ODObjCRuntime.h */; };
+		FA74502E1C062A6C008A9024 /* ODObjCIvar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30521C00854C00BD3CE5 /* ODObjCIvar.h */; };
+		FA74502F1C062A6C008A9024 /* ODObjCMethod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304F1C00844800BD3CE5 /* ODObjCMethod.h */; };
+		FA7450301C062A6C008A9024 /* ODObjCProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304C1C00843D00BD3CE5 /* ODObjCProperty.h */; };
+		FA7450311C062A6C008A9024 /* ODObjCProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30471C0082C300BD3CE5 /* ODObjCProtocol.h */; };
+		FA7450321C062A6C008A9024 /* ODObjCClass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAB87D341C03628E002AE47E /* ODObjCClass.h */; };
+		FA7450341C062A88008A9024 /* ODObjCRuntime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C303E1C0080DA00BD3CE5 /* ODObjCRuntime.h */; };
+		FA7450351C062A88008A9024 /* ODObjCIvar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30521C00854C00BD3CE5 /* ODObjCIvar.h */; };
+		FA7450361C062A88008A9024 /* ODObjCMethod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304F1C00844800BD3CE5 /* ODObjCMethod.h */; };
+		FA7450371C062A88008A9024 /* ODObjCProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304C1C00843D00BD3CE5 /* ODObjCProperty.h */; };
+		FA7450381C062A88008A9024 /* ODObjCProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30471C0082C300BD3CE5 /* ODObjCProtocol.h */; };
+		FA7450391C062A88008A9024 /* ODObjCClass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAB87D341C03628E002AE47E /* ODObjCClass.h */; };
 		FA9BD22D1C01C77800D0A18B /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
 		FA9BD22E1C01C77B00D0A18B /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
 		FA9BD22F1C01C77D00D0A18B /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
@@ -48,6 +52,27 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				FA74502D1C062A6C008A9024 /* ODObjCRuntime.h in CopyFiles */,
+				FA74502E1C062A6C008A9024 /* ODObjCIvar.h in CopyFiles */,
+				FA74502F1C062A6C008A9024 /* ODObjCMethod.h in CopyFiles */,
+				FA7450301C062A6C008A9024 /* ODObjCProperty.h in CopyFiles */,
+				FA7450311C062A6C008A9024 /* ODObjCProtocol.h in CopyFiles */,
+				FA7450321C062A6C008A9024 /* ODObjCClass.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7450331C062A7C008A9024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FA7450341C062A88008A9024 /* ODObjCRuntime.h in CopyFiles */,
+				FA7450351C062A88008A9024 /* ODObjCIvar.h in CopyFiles */,
+				FA7450361C062A88008A9024 /* ODObjCMethod.h in CopyFiles */,
+				FA7450371C062A88008A9024 /* ODObjCProperty.h in CopyFiles */,
+				FA7450381C062A88008A9024 /* ODObjCProtocol.h in CopyFiles */,
+				FA7450391C062A88008A9024 /* ODObjCClass.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +197,7 @@
 				FA16A5F51C0506DD00394311 /* Sources */,
 				FA16A5F61C0506DD00394311 /* Frameworks */,
 				FA16A5F71C0506DD00394311 /* Headers */,
+				FA7450331C062A7C008A9024 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -261,8 +287,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2C30451C0080F000BD3CE5 /* ODObjCRuntime.podspec in Resources */,
-				FA2C30441C0080F000BD3CE5 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,13 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2C30461C0080F000BD3CE5 /* README.md in Sources */,
-				FA2C304E1C00843D00BD3CE5 /* ODObjCProperty.m in Sources */,
 				FA2C30351C007E3300BD3CE5 /* ODObjCRuntime_Tests.m in Sources */,
-				FA2C30491C0082C300BD3CE5 /* ODObjCProtocol.m in Sources */,
-				FA2C30541C00854C00BD3CE5 /* ODObjCIvar.m in Sources */,
-				FA2C304B1C0082CE00BD3CE5 /* ODObjCRuntime.m in Sources */,
-				FA2C30511C00844800BD3CE5 /* ODObjCMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +344,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -337,6 +356,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -425,6 +445,7 @@
 		FA2C302C1C007E1300BD3CE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +457,7 @@
 		FA2C302D1C007E1300BD3CE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,6 +496,7 @@
 				FA16A6011C0506DE00394311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA2C301D1C007E1300BD3CE5 /* Build configuration list for PBXProject "ODObjCRuntime" */ = {
 			isa = XCConfigurationList;
