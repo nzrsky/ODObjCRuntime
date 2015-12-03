@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA09B2701C10812F00311153 /* ODObjCRuntime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C303E1C0080DA00BD3CE5 /* ODObjCRuntime.h */; };
+		FA09B2711C10812F00311153 /* ODObjCIvar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30521C00854C00BD3CE5 /* ODObjCIvar.h */; };
+		FA09B2721C10812F00311153 /* ODObjCMethod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304F1C00844800BD3CE5 /* ODObjCMethod.h */; };
+		FA09B2731C10812F00311153 /* ODObjCProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C304C1C00843D00BD3CE5 /* ODObjCProperty.h */; };
+		FA09B2741C10812F00311153 /* ODObjCProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2C30471C0082C300BD3CE5 /* ODObjCProtocol.h */; };
+		FA09B2751C10812F00311153 /* ODObjCClass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAB87D341C03628E002AE47E /* ODObjCClass.h */; };
+		FA09B2761C10814200311153 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
+		FA09B2771C10814200311153 /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
+		FA09B2781C10814200311153 /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
+		FA09B2791C10814200311153 /* ODObjCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C304D1C00843D00BD3CE5 /* ODObjCProperty.m */; };
+		FA09B27A1C10814200311153 /* ODObjCProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30481C0082C300BD3CE5 /* ODObjCProtocol.m */; };
+		FA09B27B1C10814200311153 /* ODObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB87D351C03628E002AE47E /* ODObjCClass.m */; };
 		FA16A6031C0506F500394311 /* ODObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C303F1C0080DA00BD3CE5 /* ODObjCRuntime.m */; };
 		FA16A6051C0506F500394311 /* ODObjCIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30531C00854C00BD3CE5 /* ODObjCIvar.m */; };
 		FA16A6071C0506F500394311 /* ODObjCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30501C00844800BD3CE5 /* ODObjCMethod.m */; };
@@ -46,10 +58,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FA09B2601C1080D100311153 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/ODObjCRuntime;
+			dstSubfolderSpec = 16;
+			files = (
+				FA09B2701C10812F00311153 /* ODObjCRuntime.h in CopyFiles */,
+				FA09B2711C10812F00311153 /* ODObjCIvar.h in CopyFiles */,
+				FA09B2721C10812F00311153 /* ODObjCMethod.h in CopyFiles */,
+				FA09B2731C10812F00311153 /* ODObjCProperty.h in CopyFiles */,
+				FA09B2741C10812F00311153 /* ODObjCProtocol.h in CopyFiles */,
+				FA09B2751C10812F00311153 /* ODObjCClass.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA2C30201C007E1300BD3CE5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include/ODObjCRuntime;
 			dstSubfolderSpec = 16;
 			files = (
 				FA74502D1C062A6C008A9024 /* ODObjCRuntime.h in CopyFiles */,
@@ -64,7 +91,7 @@
 		FA7450331C062A7C008A9024 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include/ODObjCRuntime;
 			dstSubfolderSpec = 16;
 			files = (
 				FA7450341C062A88008A9024 /* ODObjCRuntime.h in CopyFiles */,
@@ -79,6 +106,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA09B2621C1080D100311153 /* libODObjCRuntime-WatchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libODObjCRuntime-WatchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA16A5F91C0506DD00394311 /* libODObjCRuntime-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libODObjCRuntime-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libODObjCRuntime.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C30321C007E3300BD3CE5 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA09B25F1C1080D100311153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA16A5F61C0506DD00394311 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +180,7 @@
 				FA2C30221C007E1300BD3CE5 /* libODObjCRuntime.a */,
 				FA2C30321C007E3300BD3CE5 /* Tests.xctest */,
 				FA16A5F91C0506DD00394311 /* libODObjCRuntime-OSX.a */,
+				FA09B2621C1080D100311153 /* libODObjCRuntime-WatchOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +226,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FA09B2611C1080D100311153 /* ODObjCRuntime-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA09B26A1C1080D100311153 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-WatchOS" */;
+			buildPhases = (
+				FA09B25E1C1080D100311153 /* Sources */,
+				FA09B25F1C1080D100311153 /* Frameworks */,
+				FA09B2601C1080D100311153 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ODObjCRuntime-WatchOS";
+			productName = "ODObjCRuntime-WatchOS";
+			productReference = FA09B2621C1080D100311153 /* libODObjCRuntime-WatchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		FA16A5F81C0506DD00394311 /* ODObjCRuntime-OSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA16A5FF1C0506DE00394311 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-OSX" */;
@@ -252,6 +305,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = AJR;
 				TargetAttributes = {
+					FA09B2611C1080D100311153 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					FA16A5F81C0506DD00394311 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -277,6 +333,7 @@
 			targets = (
 				FA2C30211C007E1300BD3CE5 /* ODObjCRuntime */,
 				FA16A5F81C0506DD00394311 /* ODObjCRuntime-OSX */,
+				FA09B2611C1080D100311153 /* ODObjCRuntime-WatchOS */,
 				FA2C30311C007E3300BD3CE5 /* Tests */,
 			);
 		};
@@ -293,6 +350,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA09B25E1C1080D100311153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA09B2761C10814200311153 /* ODObjCRuntime.m in Sources */,
+				FA09B2771C10814200311153 /* ODObjCIvar.m in Sources */,
+				FA09B2781C10814200311153 /* ODObjCMethod.m in Sources */,
+				FA09B2791C10814200311153 /* ODObjCProperty.m in Sources */,
+				FA09B27A1C10814200311153 /* ODObjCProtocol.m in Sources */,
+				FA09B27B1C10814200311153 /* ODObjCClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA16A5F51C0506DD00394311 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +408,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FA09B2681C1080D100311153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		FA09B2691C1080D100311153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		FA16A6001C0506DE00394311 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -489,6 +581,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA09B26A1C1080D100311153 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA09B2681C1080D100311153 /* Debug */,
+				FA09B2691C1080D100311153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FA16A5FF1C0506DE00394311 /* Build configuration list for PBXNativeTarget "ODObjCRuntime-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

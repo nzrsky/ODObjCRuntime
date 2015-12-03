@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "47A37E1797B0ABFEFE598E8541BC642073B5C3DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "303DD43EEA15FC300D8D4C66EEC6647B3704838F" : 0,
+    "47A37E1797B0ABFEFE598E8541BC642073B5C3DF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "952F78F8-C229-431D-BF55-F661B724C2F8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "303DD43EEA15FC300D8D4C66EEC6647B3704838F" : "..\/ODX.Core",
+    "47A37E1797B0ABFEFE598E8541BC642073B5C3DF" : "ODObjCRuntime\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ODObjCRuntime",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ODObjCRuntime.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Rogaven\/ODX.Core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "303DD43EEA15FC300D8D4C66EEC6647B3704838F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Rogaven\/ODObjCRuntime.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47A37E1797B0ABFEFE598E8541BC642073B5C3DF"
+    }
+  ]
+}

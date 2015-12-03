@@ -13,6 +13,7 @@
 #import "ODObjCProperty.h"
 #import "ODObjCIvar.h"
 #import "ODObjCClass.h"
+#import "NSObject+ODTransformation.h"
 
 @protocol ODObjCRuntime_TestProtocol <NSObject>
 @required
@@ -240,6 +241,29 @@
 }
 
 + (void)testStatic {
+}
+
+
+- (void)testReduceA {
+    [self measureBlock:^{
+        BOOL b = NO;
+        for(int i=0; i<100000; i++) {
+            b &= ([self.class od_ivarWithName:@"_propertyInt"] != nil);
+        }
+    }];
+}
+
+- (void)testReduceB {
+    [self measureBlock:^{
+        BOOL b = NO;
+        NSDictionary *md = [[self.class od_ivars] od_dictionaryWithMappedKeys:^id(ODObjCIvar *obj, NSUInteger idx) {
+            return obj.name;
+        }];
+        
+        for(int i=0; i<100000; i++) {
+            b &= (md[@"_propertyInt"] != nil);
+        }
+    }];
 }
 
 @end
