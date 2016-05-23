@@ -25,7 +25,12 @@
 + (size_t)od_instanceSize;
 + (NSString *)od_objCType;
 
+/** Ivars of current class */
 + (NSArray<ODObjCIvar *> *)od_ivars;
+
+/** All ivars available of current class, including superclass ivars */
++ (NSArray<ODObjCIvar *> *)od_availableIvars;
+
 + (ODObjCIvar *)od_ivarWithName:(NSString *)name;
 
 + (NSArray<ODObjCMethod *> *)od_methods;

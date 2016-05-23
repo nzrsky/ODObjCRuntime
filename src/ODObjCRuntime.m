@@ -25,6 +25,15 @@
     return array;
 }
 
++ (NSArray<ODObjCIvar *> *)od_availableIvars {
+    NSMutableArray *ivars = [self od_ivars].mutableCopy ?: [NSMutableArray new];
+    Class cls = self.class;
+    while ((cls = cls.superclass) && ![cls isEqual:NSObject.class]) {
+        [ivars addObjectsFromArray:[cls od_ivars]];
+    }
+    return ivars;
+}
+
 + (ODObjCIvar *)od_ivarWithName:(NSString *)name {
     Ivar ivar = class_getInstanceVariable(self, name.UTF8String);
     return ivar ? [[ODObjCIvar alloc] initWithIvar:ivar] : nil;

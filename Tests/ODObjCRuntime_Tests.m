@@ -13,7 +13,7 @@
 #import "ODObjCProperty.h"
 #import "ODObjCIvar.h"
 #import "ODObjCClass.h"
-#import "NSObject+ODTransformation.h"
+#import <ODX.Core/NSObject+ODTransformation.h>
 
 @protocol ODObjCRuntime_TestProtocol <NSObject>
 @required
@@ -58,11 +58,31 @@
     int ivarInt;
 }
 
+@interface NSAObject: NSObject {
+    int a;
+}
+@end
+
+@interface NSBObject: NSAObject {
+    int b;
+}
+@end
+
+@implementation NSAObject
+@end
+
+@implementation NSBObject
+@end
+
 #pragma mark - Ivars
 - (void)testIvars {
-    NSArray<ODObjCIvar *> *ivars = [self.class od_ivars];
-    XCTAssert(ivars.count == 10);
+    NSArray<ODObjCIvar *> *ivars = [NSBObject.class od_ivars];
+    XCTAssert(ivars.count == 1);
     
+    ivars = [NSBObject.class od_availableIvars];
+    XCTAssert(ivars.count == 2);
+    
+    ivars = [self od_ivars];
     ODObjCIvar *ivar = ivars.firstObject;
     XCTAssert(ivar.offset == 24 && [ivar.name isEqualToString:@"ivarString"] && [ivar.typeEncoding isEqualToString:@"@\"NSString\""]);
     XCTAssert([ivar isEqual:[self.class od_ivarWithName:@"ivarString"]]);
@@ -83,7 +103,7 @@
 #pragma mark - Methods
 - (void)testMethods {
     NSArray<ODObjCMethod *> *methods = [self.class od_methods];
-    XCTAssert(methods.count == 9);
+    XCTAssert(methods.count == 11);
     
     IMP imp = [ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)].implementation;
     
@@ -101,13 +121,13 @@
                                                                implementation:method.implementation
                                                                  typeEncoding:method.typeEncoding]]);
     methods = [self.class od_methods];
-    XCTAssert(methods.count == 10);
+    XCTAssert(methods.count == 12);
     XCTAssert([self respondsToSelector:NSSelectorFromString(@"beefMethod")]);
     XCTAssert([(ODObjCRuntime_TestClass *)self beefMethod] == 0xbeef);
     
     XCTAssert([self.class od_addMethod:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)]]);
     methods = [self.class od_methods];
-    XCTAssert(methods.count == 11);
+    XCTAssert(methods.count == 13);
     XCTAssert([(ODObjCRuntime_TestClass *)self deadMethod] == 0xdead);
 
     [method exchangeImplementationsWithMethod:[ODObjCRuntime_TestClass od_methodWithSelector:@selector(deadMethod)]];
