@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ODObjCRuntime"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "ObjC wrapper for working with ObjC Runtime functions."
   s.homepage     = "https://github.com/Rogaven/ODObjCRuntime"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '1.0'
   s.source_files = 'src/**/*'
   s.requires_arc = true
+  s.deprecated_in_favor_of = 'ODRuntime'
 end
