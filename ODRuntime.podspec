@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   s.frameworks    = 'Foundation'
   # s.osx.frameworks = 'CoreServices'  
   
-  s.source_files = 'src/**/*.h'
-  s.public_header_files = 'src/**/*.h'
+  s.source_files = 'src/**/*'
+  s.public_header_files = 'src/**/*'
   
   #s.dependency ''
   
