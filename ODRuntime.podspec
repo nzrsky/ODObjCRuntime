@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ODRuntime'
-  s.version      = '1.2.1'
+  s.version      = '1.2.2'
   s.summary      = 'ObjC wrapper for working with ObjC Runtime functions.'
   s.homepage     = 'https://github.com/Rogaven/ODObjCRuntime.git'
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   s.frameworks    = 'Foundation'
   # s.osx.frameworks = 'CoreServices'  
   
-  s.source_files = 'src/**/*'
-  s.public_header_files = 'src/**/*'
+  s.source_files = "src/**/*"
+  s.public_header_files = "src/**/*.h"
   
   #s.dependency ''
   
